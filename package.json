@@ -1,0 +1,32 @@
+{
+  "name": "mongooselab",
+  "version": "1.0.0",
+  "description": "web service lab",
+  "main": "index.js",
+  "scripts": {
+      "test" : "mocha \"api/**/test/*.js\""
+  },
+  "author": "fxwalsh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "lodash": "^4.6.0",
+    "mailgun-js": "^0.7.7",
+    "mongoose": "^4.4.5",
+    "pubnub": "^3.10.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobsirl/mongooselab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobsirl/mongooselab/issues"
+  },
+  "homepage": "https://github.com/tobsirl/mongooselab#readme"
+}
