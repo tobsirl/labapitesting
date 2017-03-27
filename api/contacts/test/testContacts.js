@@ -9,7 +9,7 @@ var server = supertest.agent("http://localhost:8000");
 
 describe("Contacts GET unit test",function(){
   // #1 should return contacts representation in json
-  it("should return collection of JSON documents",function(done){
+  it("Should return collection of JSON documents",function(done){
 
     // calling home page api
     server
@@ -23,4 +23,18 @@ describe("Contacts GET unit test",function(){
     });
   });
 
+});
+
+// #2 add a contact
+it("Should add a new contact",function(done){
+
+  // post to /api/contacts
+  server.post('/api/contacts')
+  .send({name:"Contact 99",address:"123 Strand St",age: 27,email: "Sambloggs@hotmail.com"})
+  .expect("Content-type",/json/)
+  .expect(201)
+  .end(function(err,res){
+    res.status.should.equal(201);
+    done();
+  });
 });
