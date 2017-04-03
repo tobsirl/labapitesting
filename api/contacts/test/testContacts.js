@@ -13,7 +13,7 @@ describe("Contacts GET unit test",function(){
 
     // calling home page api
     server
-    .get("/api/contacts")
+    .get("/api/contacts/")
     .expect("Content-type",/json/)
     .expect(200) // THis is HTTP response
     .end(function(err,res){
